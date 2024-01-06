@@ -1,0 +1,178 @@
+/* makes sizing simpler */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+/* min body height */
+body {
+  min-height: 100vh;
+  font-family: 'Hanken Grotesk', sans-serif;
+  display: grid;
+  place-items: center;
+}
+
+.card{
+    border-radius: 2rem;
+    max-width: 46rem;
+    display: grid;
+}
+
+@media (min-width: 600px) {
+    .card{
+        grid-template-columns: 1fr 1fr;
+        overflow: hidden;
+        box-shadow: .5rem 1rem 3rem hsl(241, 81%, 54%, .1);
+    }
+}
+
+.score{
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    text-align: center;
+    padding: 3rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+    color: white;
+    display: grid;
+}
+
+@media (min-width: 600px) {
+    .score{
+        border-radius: 1.5rem;
+        overflow: hidden;
+    }
+}
+
+.score[spacing='large'] {
+    gap: 2rem;
+}
+
+.grid-flow{
+    display: grid;
+    gap: .7rem;
+}
+
+.heading{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.score p{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+p.grade{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.score span{
+    display: block;
+    font-size: 4rem;
+    color: white;
+    font-weight: 800;
+}
+
+.final-score{
+    aspect-ratio: 1 / 1;
+    width: 12rem;
+    display: grid;
+    place-content: center;
+    margin-inline: auto;
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(256, 72%, 46%, 0));
+    border-radius: 50%;
+}
+
+.summary{
+    padding: 3rem;
+}
+
+button{
+    border-radius: 100vh;
+    border: none;
+    background: hsl(224, 30%, 27%);
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+}
+button:hover{
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    transition: all .4s;
+}
+
+h2{
+    color: hsl(224, 30%, 27%);
+    margin-bottom: .7rem;
+}
+
+.flex-group{
+    display: flex;
+    gap: .4rem;
+}
+
+.summary-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: .5rem;
+    align-items: center;
+}
+
+.accent1{
+    background-color: hsl(0, 100%, 67%, .1);
+}
+.accent2{
+    background-color: hsl(39, 100%, 56%, .1);
+}
+.accent3{
+    background-color: hsl(166, 100%, 37%, .1);
+}
+.accent4{
+    background-color: hsl(234, 85%, 45%, .1);
+}
+
+.accent1 h3{
+    color: hsl(0, 100%, 67%);
+}
+.accent2 h3{
+    color: hsl(39, 100%, 56%);
+}
+.accent3 h3{
+    color: hsl(166, 100%, 37%);
+}
+.accent4 h3{
+    color: hsl(234, 85%, 45%);
+}
+
+svg{
+    height: 80%;
+}
+
+.summary p{
+    color: hsl(224, 30%, 27%, .6);
+    font-weight: 700;
+}
+
+.summary span{
+    color: hsl(224, 30%, 27%);
+}
